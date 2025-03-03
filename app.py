@@ -60,7 +60,6 @@ def main():
 
         # Predict using Isolation Forest
         prediction = model.predict(features)
-        score = decision_function(features)[0]
 
         # Interpretation: -1 = anomaly, 1 = normal
         result = "🚨 Anomalous" if prediction[0] == -1 else "✅ Normal"
@@ -68,7 +67,6 @@ def main():
         # Display Result
         st.subheader("📊 Prediction Result")
         st.write(f"**Result:** {result}")
-        st.write(f"Anamoly Score: {score:.3f}")
 
     # Add footer
     st.markdown("---")
